@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-chat-container',
@@ -8,5 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './chat-container.component.css'
 })
 export class ChatContainerComponent {
-  @Input() messages: any=[];
+  messages: any=[];
+  constructor(private common: CommonService) {
+    this.common.serviceData$.subscribe( d => {
+       this.messages.push({msg:d});
+  })
+  }
 }

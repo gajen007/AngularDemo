@@ -11,8 +11,4 @@ import { SendChatFormComponent } from "./send-chat-form/send-chat-form.component
 })
 export class AppComponent {
   title = 'AngularDemo';
-  fromSendChatForm: string = '';
-  getTextFromSendChatForm(val: string) {
-    this.fromSendChatForm = val;
- }
 }

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-send-chat-form',
@@ -8,9 +9,13 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './send-chat-form.component.css'
 })
 export class SendChatFormComponent {
+  constructor(private common: CommonService){
+
+  }
+
   textInput: string = '';
-  @Output() toParent = new EventEmitter<string>();
   sendChat(event: any) {
-    this.toParent.emit(this.textInput)
+    this.common.update(this.textInput);
+    this.textInput = '';
   }
 }

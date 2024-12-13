@@ -1,6 +1,6 @@
 <main class="main">
-<div>App Page</div> 
+<div>{{fromSendChatForm}}</div>
 <app-chat-container/>
-<app-send-chat-form/> 
+<app-send-chat-form (toParent)="getTextFromSendChatForm($event)"/> 
 </main>
 <router-outlet />

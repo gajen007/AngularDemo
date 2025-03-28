@@ -1,21 +1,6 @@
-<h5>Add User & Age via Http POST</h5>
-<input type="text" [(ngModel)]="userNameInput" placeholder="Type User's Name"/><br/>
-<input type="number" [(ngModel)]="userAgeInput"/><br/>
-<button (click)="addUser()">Add User Data</button>
-
-<div *ngIf="users.length>0">
-    <h5>*ngFor with list of Objects derived via http-get from NodeJS backend with MongoDB</h5>
-    <ol>
-        <li style="margin-bottom: 2px;" *ngFor="let user of users; let i=index">
-            <user-grid [index]="i + 1" un={{user?.userName}} [ua]="user?.userAge??0"></user-grid>
-        </li>
-    </ol>
-</div>
-<!--
-<h5>Custom Directive</h5>
-<p [appHighlight]="'green'">Hover over this text to see the HighLight effect</p>
-<h5>Pipes</h5>
-<span>Unformatted Date:&nbsp;{{myDate}}</span><br/>
-<span>Formatted Date:&nbsp;&nbsp;{{myDate|date}}</span><br/>
-<span>Formatted Medium Date:&nbsp;{{myDate|date:'medium'}}</span><br/>
--->
+<ul>
+    <li><a href="/lifecyclehooks">LifeCycle Hooks</a></li>
+    <li><a href="/pipes">Pipes</a></li>
+    <li><a href="/directives">Directives</a></li>
+    <li><a href="/userdata">HTTP Get & Post</a></li>
+</ul>

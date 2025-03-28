@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common'; //for ngIf like directives
 //import { CommonService } from '@/services/common.service';
 import { GridComponent } from '@/components/grid/grid.component';
 import { FormsModule } from '@angular/forms';
+import { HighlightDirective } from '@/directives/highlight.directive';
 
 @Component({
   selector: 'app-welcome',
-  imports: [CommonModule,FormsModule,GridComponent],
+  imports: [CommonModule,FormsModule,GridComponent,HighlightDirective],
   templateUrl: './welcome.component.html',
   styleUrl: './welcome.component.css'
 })

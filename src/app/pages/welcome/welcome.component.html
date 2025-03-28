@@ -1,3 +1,15 @@
-<div *ngIf="appear">Hi There!</div>
-<button (click)="switchAppear()">Switch</button>
+<div *ngIf="appear">Hi There!</div><br/><br/>
+<button (click)="switchAppear()">Switch</button><br/><br/>
+<span>Static text from the variable 'myText': </span>{{myText}}<br/><br/>
+<input [(ngModel)]="myInput" type="text" placeholder="typing text will appear below"/><br/><br/>
+<div>My Input for 2 way data binding: {{myInput}}</div><br/><br/>
+<p [textContent]="usr?.name"></p>
+<div>
+    
+</div>
 
+<ol>
+    <li *ngFor="let user of users; let i=index">
+        <user-grid [index]="i + 1" un={{user?.userName}} [ua]="user?.userAge??0"></user-grid>
+    </li>
+</ol>
